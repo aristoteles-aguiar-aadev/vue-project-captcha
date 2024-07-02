@@ -9,7 +9,7 @@ console.log(dadosCnpj.cnpj, dadosCnpj.codEmpresa);
 </script>
 
 <template>
-  <div>
+  <div class="container">
     <form class="formulario">
       <label for="cnpj">CNPJ</label><br />
       <input
@@ -27,20 +27,39 @@ console.log(dadosCnpj.cnpj, dadosCnpj.codEmpresa);
         @input="valideCodEmpresa"
       /><br />
     </form>
+    <p>
+      Teste de cnpj {{ dadosCnpj.cnpj }} codEmpresa {{ dadosCnpj.codEmpresa }}
+    </p>
   </div>
-
-  <p style="text-align: center">
-     Teste de cnpj {{ dadosCnpj.cnpj }} codEmpresa {{ dadosCnpj.codEmpresa }}
-  </p>
 </template>
 
 <style scoped>
-.cnpj,
-.codEmpresa {
-  margin: 1rem;
-  padding: 0.3rem;
+.container {
   display: flex;
-  text-align: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 40vh; /* Garante que o container ocupe a tela toda */
+  text-align: center; /* Centraliza o texto */
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  margin: 0.2rem 0;
+}
+
+input {
+  margin: 0.2rem 0 0 0;
+  padding: 0.3rem 0;
+  text-align: center;
+}
+
+p {
+  margin-top: 0.2rem;
 }
 </style>

@@ -1,13 +1,11 @@
 <script setup>
-
 const name = "Login";
 import UserLogin from './UserLogin.vue';
-
 </script>
 
 <template>
-  <div>
-    <div>
+  <div class="container">
+    <div class="logo-container">
       <img class="logo" src="../assets/logo.png" alt="logo">
     </div>
     <h1 class="titleHome">{{ name }}</h1>
@@ -15,14 +13,26 @@ import UserLogin from './UserLogin.vue';
 </template>
 
 <style scoped>
-.logo {
-  margin: auto;
-  box-sizing: border-box;
-  position:relative;
-  align-items:center;
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh; /* Garante que o container ocupe a tela toda */
 }
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  max-width: 100%; /* Garante que o logo não ultrapasse os limites do container */
+}
+
 .titleHome {
-  margin: 2rem;
+  margin: 0;
   text-align: center;
 }
 </style>
