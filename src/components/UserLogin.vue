@@ -1,16 +1,6 @@
-<script setup>
-import { reactive } from "vue";
-const dadosCnpj = reactive({
-  cnpj: "",
-  codEmpresa: "",
-});
-
-console.log(dadosCnpj.cnpj, dadosCnpj.codEmpresa);
-</script>
-
 <template>
   <div class="container">
-    <form class="formulario">
+    <form class="formulario" @submit.prevent="autenticarAcesso">
       <label for="cnpj">CNPJ</label><br />
       <input
         type="text"
@@ -26,12 +16,48 @@ console.log(dadosCnpj.cnpj, dadosCnpj.codEmpresa);
         placeholder="Ex: 123456"
         @input="valideCodEmpresa"
       /><br />
+
+      <div
+        class="g-recaptcha"
+        data-sitekey="6LcvygcqAAAAAFVrNjVklnM2hdamfEQcGaU0IP1w"
+      ></div>
+
+      <button type="submit">Autenticar Acesso</button>
     </form>
-    <p>
-      Teste de cnpj {{ dadosCnpj.cnpj }} codEmpresa {{ dadosCnpj.codEmpresa }}
-    </p>
+
+    <div class="footer">
+      <h6>© Todos os direitos reservados 2024</h6>
+      <h6>Aristóteles Aguiar</h6><br>
+     
+    </div>
   </div>
 </template>
+
+<script setup>
+import { reactive } from "vue";
+
+const dadosCnpj = reactive({
+  cnpj: "",
+  codEmpresa: "",
+});
+
+const valideCnpj = () => {};
+
+const valideCodEmpresa = () => {};
+
+const autenticarAcesso = () => {
+  const recaptchaResponse = grecaptcha.getResponse();
+  if (recaptchaResponse.length === 0) {
+    alert("Por favor, complete o reCAPTCHA.");
+    return;
+  }
+  // Enviar recaptchaResponse para seu backend para validação
+  console.log("reCAPTCHA response:", recaptchaResponse);
+};
+
+
+console.log(dadosCnpj.cnpj, dadosCnpj.codEmpresa);
+</script>
 
 <style scoped>
 .container {
@@ -39,8 +65,8 @@ console.log(dadosCnpj.cnpj, dadosCnpj.codEmpresa);
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 40vh; /* Garante que o container ocupe a tela toda */
-  text-align: center; /* Centraliza o texto */
+  height: 40vh;
+  text-align: center;
 }
 
 .formulario {
@@ -59,7 +85,28 @@ input {
   text-align: center;
 }
 
+.g-recaptcha {
+  margin: 1rem 0;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
 p {
   margin-top: 0.2rem;
+}
+.footer {
+  margin: 2rem;
 }
 </style>

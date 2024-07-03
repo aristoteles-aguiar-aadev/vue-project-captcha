@@ -13,7 +13,8 @@
     "test:unit:dev": "cypress open --component"
   },
   "dependencies": {
-    "vue": "^3.4.29"
+    "vue": "^3.4.29",
+    "vue-recaptcha-v3": "^2.0.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.5",

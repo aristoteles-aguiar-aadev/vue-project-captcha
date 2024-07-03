@@ -1,6 +1,5 @@
 <script setup>
 import Home from "./components/Home.vue";
-import RecaptchaVue from "./components/Recaptcha.vue";
 import UserLoginVue from "./components/UserLogin.vue";
 </script>
 
@@ -11,7 +10,6 @@ import UserLoginVue from "./components/UserLogin.vue";
 
   <main>
     <UserLoginVue />
-    <Recaptcha />
   </main>
 </template>
 
