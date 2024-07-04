@@ -15,24 +15,32 @@ import UserLogin from './UserLogin.vue';
 <style scoped>
 .container {
   display: flex;
+  position: relative;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 50vh; /* Garante que o container ocupe a tela toda */
+  height: 70vh;
+  background-color: #f5f5f5; /* Adiciona um fundo leve */
+  padding: 20px;
+  border-bottom: 1px solid #ddd; /* Adiciona uma linha inferior para separação */
 }
 
 .logo-container {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px; /* Espaço entre o logo e o título */
 }
 
 .logo {
-  max-width: 100%; /* Garante que o logo não ultrapasse os limites do container */
+  max-width: 80%; /* Garante que o logo não ultrapasse os limites do container */
+  height: auto;
 }
 
 .titleHome {
-  margin: 0;
+  margin: 1rem;
   text-align: center;
+  font-size: 2rem; /* Ajuste o tamanho da fonte */
+  color: #333; /* Cor do texto */
 }
 </style>

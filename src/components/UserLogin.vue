@@ -1,21 +1,21 @@
 <template>
   <div class="container">
     <form class="formulario" @submit.prevent="autenticarAcesso">
-      <label for="cnpj">CNPJ</label><br />
+      <label for="cnpj">CNPJ</label>
       <input
         type="text"
         v-model="dadosCnpj.cnpj"
         placeholder="Ex: 11.222.333/4444-55"
         @input="valideCnpj"
-      /><br />
+      />
 
-      <label for="codigoEmpresa">Código Empresa</label><br />
+      <label for="codigoEmpresa">Código Empresa</label>
       <input
         type="number"
         v-model="dadosCnpj.codEmpresa"
         placeholder="Ex: 123456"
         @input="valideCodEmpresa"
-      /><br />
+      />
 
       <div
         class="g-recaptcha"
@@ -27,8 +27,7 @@
 
     <div class="footer">
       <h6>© Todos os direitos reservados 2024</h6>
-      <h6>Aristóteles Aguiar</h6><br>
-     
+      <h6>Aristóteles Aguiar</h6>
     </div>
   </div>
 </template>
@@ -55,12 +54,7 @@ const autenticarAcesso = () => {
   console.log("reCAPTCHA response:", recaptchaResponse);
 };
 
-
 console.log(dadosCnpj.cnpj, dadosCnpj.codEmpresa);
-
-
-
-
 </script>
 
 <style scoped>
@@ -69,48 +63,62 @@ console.log(dadosCnpj.cnpj, dadosCnpj.codEmpresa);
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 40vh;
-  text-align: center;
+  min-height: 30vh; /* Garante que o container ocupe uma altura mínima */
+  padding: 20px;
+  background-color: #ffffff; /* Fundo branco para contraste */
 }
 
 .formulario {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  max-width: 400px; /* Limita a largura máxima do formulário */
+  background-color: #f9f9f9; /* Fundo do formulário */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 label {
-  margin: 0.2rem 0;
+  margin: 0.5rem 0;
+  font-weight: bold;
+  color: #555;
 }
 
 input {
-  margin: 0.2rem 0 0 0;
-  padding: 0.3rem 0;
+  margin: 0.3rem 0 1rem 0;
+  padding: 0.5rem;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .g-recaptcha {
-  margin: 1rem 0;
+  margin: 2rem 0;
 }
 
 button {
   margin-top: 1rem;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.5rem;
   background-color: #007bff;
   color: white;
   border: none;
   border-radius: 0.25rem;
   cursor: pointer;
+  font-size: 1rem;
 }
 
 button:hover {
   background-color: #0056b3;
 }
 
-p {
-  margin-top: 0.2rem;
-}
 .footer {
-  margin: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+  color: #777;
 }
 </style>
