@@ -1,4 +1,4 @@
-# author
+# Project author 
 Aristóteles Aguiar
 
 # vue-project-recaptcha
@@ -54,7 +54,7 @@ But it's still recommended to test the production build with `test:e2e` before d
 npm run build
 npm run test:e2e
 ```
-
+### This command installs the serve package globally on your machine, 
 ```sh
 npm install -g serve
 serve -s dist
