@@ -22,7 +22,7 @@
         data-sitekey="6LdCxAcqAAAAADkQpk4P3QU5exJiVWk00vDNzLoQ"
       ></div>
 
-      <button type="submit">Autenticar Acesso</button>
+      <button type="submit">Buscar</button>
     </form>
 
     <div class="footer">
@@ -63,9 +63,9 @@ console.log(dadosCnpj.cnpj, dadosCnpj.codEmpresa);
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 30vh; /* Garante que o container ocupe uma altura mínima */
+  min-height: 30vh; 
   padding: 20px;
-  background-color: #ffffff; /* Fundo branco para contraste */
+  background-color: #ffffff; 
 }
 
 .formulario {
@@ -73,8 +73,8 @@ console.log(dadosCnpj.cnpj, dadosCnpj.codEmpresa);
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 400px; /* Limita a largura máxima do formulário */
-  background-color: #f9f9f9; /* Fundo do formulário */
+  max-width: 400px; 
+  background-color: #f9f9f9; 
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -84,7 +84,7 @@ console.log(dadosCnpj.cnpj, dadosCnpj.codEmpresa);
 label {
   margin: 0.5rem 0;
   font-weight: bold;
-  color: #555;
+  color: #086EBA;
 }
 
 input {
@@ -107,7 +107,7 @@ button {
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 0.25rem;
+  border-radius: 0.4rem;
   cursor: pointer;
   font-size: 1rem;
 }
@@ -117,7 +117,7 @@ button:hover {
 }
 
 .footer {
-  margin-top: 2rem;
+  margin-top: 5px;
   text-align: center;
   color: #777;
 }

@@ -19,28 +19,28 @@ import UserLogin from './UserLogin.vue';
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 70vh;
-  background-color: #f5f5f5; /* Adiciona um fundo leve */
+  height: 50vh;
+  background-color: #ffffff;
   padding: 20px;
-  border-bottom: 1px solid #ddd; /* Adiciona uma linha inferior para separação */
+  border-bottom: 1px solid #ddd;
 }
 
 .logo-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px; /* Espaço entre o logo e o título */
+  margin-bottom: 2px;
 }
 
 .logo {
-  max-width: 80%; /* Garante que o logo não ultrapasse os limites do container */
+  max-width: 80%; 
   height: auto;
 }
 
 .titleHome {
   margin: 1rem;
   text-align: center;
-  font-size: 2rem; /* Ajuste o tamanho da fonte */
-  color: #333; /* Cor do texto */
+  font-size: 2rem; 
+  color: #086EBA; 
 }
 </style>
