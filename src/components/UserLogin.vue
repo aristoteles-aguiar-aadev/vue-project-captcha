@@ -19,7 +19,7 @@
 
       <div
         class="g-recaptcha"
-        data-sitekey="6LcvygcqAAAAAFVrNjVklnM2hdamfEQcGaU0IP1w"
+        data-sitekey="6LdCxAcqAAAAADkQpk4P3QU5exJiVWk00vDNzLoQ"
       ></div>
 
       <button type="submit">Autenticar Acesso</button>
@@ -57,6 +57,10 @@ const autenticarAcesso = () => {
 
 
 console.log(dadosCnpj.cnpj, dadosCnpj.codEmpresa);
+
+
+
+
 </script>
 
 <style scoped>
