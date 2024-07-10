@@ -60,8 +60,8 @@ serve -s dist
 ```
 
 Detalhes Técnicos:
-- npm install -g serve: Este comando instala o pacote serve globalmente na sua máquina. O serve é um servidor HTTP estático de linha de comando, simples e sem configuração, que pode ser usado para servir seus arquivos estáticos, como os arquivos gerados pelo seu processo de build.
-- serve -s dist: Este comando usa o serve para servir o conteúdo do diretório dist (que contém a sua build de produção) em modo de aplicação de página única (SPA). A flag -s habilita o modo SPA, o que significa que qualquer solicitação que não corresponda a um arquivo será servida pelo index.html. Isso é útil para roteamento no lado do cliente.
+- **npm install -g serve**: Este comando instala o pacote serve globalmente na sua máquina. O serve é um servidor HTTP estático de linha de comando, simples e sem configuração, que pode ser usado para servir seus arquivos estáticos, como os arquivos gerados pelo seu processo de build.
+- **serve -s dist**: Este comando usa o serve para servir o conteúdo do diretório dist (que contém a sua build de produção) em modo de aplicação de página única (SPA). A flag -s habilita o modo SPA, o que significa que qualquer solicitação que não corresponda a um arquivo será servida pelo index.html. Isso é útil para roteamento no lado do cliente.
 # Erro ao executar 'serve -s dist'
 
 1. **Se tentar executar o comando abaixo:**
