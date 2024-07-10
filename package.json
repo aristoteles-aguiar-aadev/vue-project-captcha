@@ -13,6 +13,7 @@
     "test:unit:dev": "cypress open --component"
   },
   "dependencies": {
+    "dotenv": "^16.4.5",
     "vue": "^3.4.29",
     "vue-recaptcha-v3": "^2.0.1"
   },
