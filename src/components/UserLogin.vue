@@ -19,21 +19,22 @@
 
       <div
         class="g-recaptcha"
-        data-sitekey="6LdCxAcqAAAAADkQpk4P3QU5exJiVWk00vDNzLoQ"
+        data-sitekey= "6LfCMAMqAAAAAPEMnNKv3IYMcBaff50z2vjqLhCa"
       ></div>
 
       <button type="submit">Buscar</button>
     </form>
 
     <div class="footer">
-      <h6>© Todos os direitos reservados 2024</h6>
-      <h6>Aristóteles Aguiar</h6>
+      <h6 class="copy">© Todos os direitos reservados 2024</h6>
+      <h6 class="author">Aristóteles Aguiar</h6>
     </div>
   </div>
 </template>
 
 <script setup>
 import { reactive } from "vue";
+import { configDotenv } from "dotenv";
 
 const dadosCnpj = reactive({
   cnpj: "",
@@ -82,14 +83,14 @@ console.log(dadosCnpj.cnpj, dadosCnpj.codEmpresa);
 }
 
 label {
-  margin: 0.5rem 0;
+  margin: 0.2rem 0;
   font-weight: bold;
   color: #086EBA;
 }
 
 input {
-  margin: 0.3rem 0 1rem 0;
-  padding: 0.5rem;
+  margin: 0 0 1rem 0;
+  padding: 0.2rem;
   width: 100%;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -119,6 +120,16 @@ button:hover {
 .footer {
   margin-top: 5px;
   text-align: center;
-  color: #777;
+}
+.copy {
+  margin: 1dvb;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
+}
+.author {
+  margin: 1dvb;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1rem;
+  color: #0056b3;
 }
 </style>

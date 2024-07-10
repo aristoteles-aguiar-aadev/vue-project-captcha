@@ -33,14 +33,14 @@ import UserLogin from './UserLogin.vue';
 }
 
 .logo {
-  max-width: 80%; 
-  height: auto;
+  max-width: 100dvw; 
+  height: 40dvh;
 }
 
 .titleHome {
-  margin: 1rem;
+  margin: 0;
   text-align: center;
-  font-size: 2rem; 
+  font-size: 1.9rem; 
   color: #086EBA; 
 }
 </style>
